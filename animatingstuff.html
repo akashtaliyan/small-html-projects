@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link type="text/css" rel="stylesheet" href="style.css">
+   <script type="text/javascript" src="jquery-3.3.1.min.js">
+    </script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="circle"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <script type="text/javascript">
+        var c=["yellow","blue","gray","black"];
+        
+        var b=true;
+        
+        
+        $("div").hover(function() {          
+            if(b){
+                var d=Math.floor(Math.random()*4);
+              $(this).animate({
+                width:"400px", 
+                height: "400px",
+                margin:"40px",
+            }, 2000,function(){
+                
+                
+                $(this).css("background" , c[d]);
+            } );
+                b=false;
+            }
+            else{
+                 var d=Math.floor(Math.random()*4);
+            $(this).animate({
+                width:"200px", 
+                height: "200px",
+            }, 2000,function(){
+                 $(this).css("background" , c[d]);
+            });
+                b=true;
+            }
+               
+        }
+        );
+           
+            
+        
+    
+    </script>
+</body>
+</html>

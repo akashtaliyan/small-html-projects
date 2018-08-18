@@ -1,0 +1,32 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+       <style>
+           #para1{
+               display: none;
+           }
+        </style>
+        <meta charset="UTF-8">
+        <title>fadding content</title>
+        <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+        <p id="para">This is a paragraph to fadeOut here.</p>
+        <p id="para1">This is a paragraph to fadeIn here.</p>
+        <button id="btn">fade Out</button>
+        <button id="btn1">fade in</button>
+
+
+        <script type="text/javascript">
+        $("#btn").click( function() {
+            $("#para").fadeOut();
+           });
+
+            $("#btn1").click( function() {
+            $("#para1").fadeIn();
+          });
+
+
+        </script>
+    </body>
+    </html>

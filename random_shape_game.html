@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <title>random shape</title>
+     <style type="text/css">
+       #shape{
+           height: 200px;
+           width: 200px;
+           background: red;
+           display:none;
+           position: relative;
+       }
+    
+    </style>
+</head>
+<body>
+  <h1>Test Your Timing</h1><br>
+    <h2>You take <span id="tim">__</span> sec.</h2>
+   <div id="shape"></div>
+   
+   
+   <script type="text/javascript">
+       var myran=Math.random()*2000;
+       
+        function makeShapeAppear() {
+            document.getElementById("shape").style.display= "block";
+            document.getElementById("shape").style.top = Math.floor(Math.random()*10)*45 + "px";
+            document.getElementById("shape").style.left = Math.floor(Math.random()*10)*90  + "px";
+            start=new Date().getTime();
+        }
+       
+        setTimeout(makeShapeAppear, myran);
+   var start=new Date().getTime();
+    document.getElementById("shape").onclick= function() {
+        document.getElementById("shape").style.display= "none";
+        var stop = new Date().getTime();
+        var timeTaken= (stop-start)/1000;
+        document.getElementById("tim").innerHTML= timeTaken;
+        setTimeout(makeShapeAppear, myran);
+        
+    }
+    
+   
+        
+    
+    </script>
+    
+</body>
+</html>

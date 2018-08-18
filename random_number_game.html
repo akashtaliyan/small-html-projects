@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>random number</title>
+</head>
+<body><h1>Guess a number!</h1>
+ <input type="number" placeholder="Enter b/w 0-9" id="gno">
+   <button id="btn">check</button>  
+    <script type="text/javascript">
+    document.getElementById("btn").onclick= function(){
+      var number=Math.floor(Math.random()*10);
+        
+        var check = document.getElementById("gno").value;
+        if(check==null){
+            alert("Enter any number");
+        }
+        else if(number==check){
+           alert("you get it!");
+        }
+        else{
+            alert("try again. The number is " + number);
+        }
+   }
+    
+    
+    </script>
+</body>
+</html>

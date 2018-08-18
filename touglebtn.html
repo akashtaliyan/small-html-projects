@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tougle</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+   <p id="tougle">hello this text is tougle based</p>
+   <button id="btn">click to tougle</button>
+   
+    <script type="text/javascript">
+   
+//        $("#btn").click( function() {
+//            
+//            if($("#tougle").css("display")== "none")
+//            $("#tougle").fadeIn("slow");
+//            else
+//                $("#tougle").fadeOut("slow");
+//           
+//           });
+        document.getElementById("btn").onclick(function(){
+            if(document.getElementById("tougle").css("display")=="none")
+                {
+                    document.getElementById("tougle").fadeIn("slow");
+                }
+            else{
+                document.getElementById("tougle").fadeOut("slow");
+            }
+        });
+        
+    
+    
+    </script>
+</body>
+</html>
